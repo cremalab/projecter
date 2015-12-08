@@ -1,0 +1,39 @@
+use:
+  - asana
+  - github_source
+  - slack
+
+asana:
+  team: projecter
+  project: pj - priorities
+  assignee: paul
+  api_key: 1234asdf
+
+# github_source, distinct from github_tasks
+# repos will be checked out to project_root/location_key
+# So... make sure the key isn't something stupid.
+github_source:
+  locations:
+    projecter: git@github.com:cremalab/projecter.git
+    # frontend: git@github.com:cremlab/project-fe.git
+    # server: gith@github.com:cremalab/server.git
+
+# project root
+project_root:
+
+# Runs scripts serially in the order listed
+# Names correspond to projecter commands, so "init" -> projecter init
+# Available: init, start, stop, reset, test
+#init:
+#  - projecter/script/init.sh
+#start:
+#  - server/script/start.sh
+#  - frontend/script/start.sh
+#stop:
+#  - server/script/stop.sh
+#  - frontend/script/stop.sh
+#reset:
+#  - server/script/reset.sh
+#test:
+#  - server/script/test.sh
+#  - frontend/script/test.sh
